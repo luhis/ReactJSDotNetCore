@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "To Do List";
+}
+@model ReactJSDotNet.ViewModels.Index
+
+<div class="well">    
+    <h1 class="text-center">To Do List</h1>
+    <div id="content"></div>
+</div>
+
+<script>
+    window.todos = @Html.Raw(Json.Serialize(Model.ToDos))
+</script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://fb.me/react-15.0.1.js"></script>
+<script src="https://fb.me/react-dom-15.0.1.js"></script>
+<script src="@Url.Content("~/build/client.bundle.js")"></script>
