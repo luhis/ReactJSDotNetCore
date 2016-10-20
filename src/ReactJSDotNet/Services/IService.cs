@@ -1,7 +1,7 @@
-﻿using ReactDemo.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ReactJSDotNet.Models;
 
-namespace ReactDemo.Services
+namespace ReactJSDotNet.Services
 {
     public interface IService
     {

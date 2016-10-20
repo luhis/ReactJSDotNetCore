@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ReactDemo.Services;
+using ReactJSDotNet.Services;
 
 namespace ReactJSDotNet.Controllers
 {

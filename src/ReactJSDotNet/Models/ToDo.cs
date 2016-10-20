@@ -1,4 +1,4 @@
-﻿namespace ReactDemo.Models
+﻿namespace ReactJSDotNet.Models
 {
     public class ToDo
     {

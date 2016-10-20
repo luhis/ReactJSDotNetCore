@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ReactDemo.Services;
-using ReactDemo.Models;
+using ReactJSDotNet.Models;
+using ReactJSDotNet.Services;
 
 namespace ReactJSDotNet.Controllers
 {

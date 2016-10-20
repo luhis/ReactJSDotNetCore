@@ -1,5 +1,5 @@
-﻿using ReactDemo.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ReactJSDotNet.Models;
 
 namespace ReactJSDotNet.ViewModels
 {

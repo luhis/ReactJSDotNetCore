@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using ReactDemo.Models;
 using System.Linq;
+using ReactJSDotNet.Models;
 
-namespace ReactDemo.Services
+namespace ReactJSDotNet.Services
 {
     public class Service : IService
     {
