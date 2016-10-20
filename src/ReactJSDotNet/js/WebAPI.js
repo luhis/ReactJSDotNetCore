@@ -1,28 +1,26 @@
 ﻿'use strict';
 
-export const Post = (todo, success) => jQuery.post({
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    url: 'api/todo',
-    data: JSON.stringify({ note: todo.note }),
-    success: success
-});
+import SuperAgent from 'superagent';
 
-export const Put = (id, todo, success) => jQuery.ajax({
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    url: 'api/todo/' + id,
-    type: 'PUT',
-    data: JSON.stringify(todo),
-    success: success
-});
+const runIfSuccessFul = (error, result, func) => {
+    if (error === null) {
+        func(result.body);
+    }
+}
 
-export const Delete = (id, success) => jQuery.ajax({
-    url: 'api/todo/' + id,
-    type: 'DELETE',
-    success: success
-});
+export const Post = (todo, success) =>
+    SuperAgent
+        .post('api/todo')
+        .send({ note: todo.note })
+        .end((e, res) => runIfSuccessFul(e, res, success));
+
+export const Put = (id, todo, success) =>
+    SuperAgent
+        .put('api/todo/' + id)
+        .send(todo)
+        .end((e, res) => runIfSuccessFul(e, res, success));
+
+export const Delete = (id, success) =>
+    SuperAgent
+        .delete('api/todo/' + id)
+        .end((e, res) => runIfSuccessFul(e, res, success));
